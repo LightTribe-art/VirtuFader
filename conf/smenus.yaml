@@ -1,0 +1,41 @@
+# This file is part of VirtuFader.
+#
+# VirtuFader is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# VirtuFader is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with VirtuFader.  If not, see <https://www.gnu.org/licenses/>.
+
+
+0:
+    start: 0
+    count: 5
+    direction: 0
+    float: null
+1:
+    start: 5
+    count: 5
+    direction: 0
+    float: null
+2:
+    start: 10
+    count: 5
+    direction: 0
+    float: null
+3:
+    start: 15
+    count: 2
+    direction: 1
+    float: null
+4:
+    start: 17
+    count: 3
+    direction: 0
+    float: null

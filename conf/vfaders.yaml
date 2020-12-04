@@ -1,0 +1,325 @@
+# This file is part of VirtuFader.
+#
+# VirtuFader is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# VirtuFader is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public L`icense
+# along with VirtuFader.  If not, see <https://www.gnu.org/licenses/>.
+
+
+0:
+    state: 1
+    displayText0: ""
+    displayText1: "(dynamic)"
+    displayTextMode: 1
+    displayTextAddress: "/Mx/button/4204/text"
+    fdrOutput: 0
+    fdrAddress: "/Mx/fader/4203"
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4201", min: 0, max: 1, r: 255, g: 5, b: 5}
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4204", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4205", min: 0, max: 1, r: null, g: null, b: null}
+1:
+    state: 1
+    displayText0: ""
+    displayText1: "(dynamic)"
+    displayTextMode: 1
+    displayTextAddress: "/Mx/button/4214/text"
+    fdrOutput: 0
+    fdrAddress: "/Mx/fader/4213"
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4211", min: 0, max: 1, r: 255, g: 5, b: 5}
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4214", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4215", min: 0, max: 1, r: null, g: null, b: null}
+2:
+    state: 1
+    displayText0: ""
+    displayText1: "(dynamic)"
+    displayTextMode: 1
+    displayTextAddress: "/Mx/button/4224/text"
+    fdrOutput: 0
+    fdrAddress: "/Mx/fader/4223"
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4221", min: 0, max: 1, r: 255, g: 5, b: 5}
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4224", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4225", min: 0, max: 1, r: null, g: null, b: null}
+3:
+    state: 1
+    displayText0: ""
+    displayText1: "(dynamic)"
+    displayTextMode: 1
+    displayTextAddress: "/Mx/button/4234/text"
+    fdrOutput: 0
+    fdrAddress: "/Mx/fader/4233"
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4231", min: 0, max: 1, r: 255, g: 5, b: 5}
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4234", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4235", min: 0, max: 1, r: null, g: null, b: null}
+4:
+    state: 1
+    displayText0: ""
+    displayText1: "(dynamic)"
+    displayTextMode: 1
+    displayTextAddress: "/Mx/button/4244/text"
+    fdrOutput: 0
+    fdrAddress: "/Mx/fader/4243"
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4241", min: 0, max: 1, r: 255, g: 5, b: 5}
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4244", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4245", min: 0, max: 1, r: null, g: null, b: null}
+5:
+    state: 1
+    displayText0: ""
+    displayText1: "(dynamic)"
+    displayTextMode: 1
+    displayTextAddress: "/Mx/button/4254/text"
+    fdrOutput: 0
+    fdrAddress: "/Mx/fader/4253"
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4251", min: 0, max: 1, r: 255, g: 5, b: 5}
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4254", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4255", min: 0, max: 1, r: null, g: null, b: null}
+6:
+    state: 1
+    displayText0: ""
+    displayText1: "(dynamic)"
+    displayTextMode: 1
+    displayTextAddress: "/Mx/button/4264/text"
+    fdrOutput: 0
+    fdrAddress: "/Mx/fader/4263"
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4261", min: 0, max: 1, r: 255, g: 5, b: 5}
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4264", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4265", min: 0, max: 1, r: null, g: null, b: null}
+7:
+    state: 1
+    displayText0: ""
+    displayText1: "(dynamic)"
+    displayTextMode: 1
+    displayTextAddress: "/Mx/button/4274/text"
+    fdrOutput: 0
+    fdrAddress: "/Mx/fader/4273"
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4271", min: 0, max: 1, r: 255, g: 5, b: 5}
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4274", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4275", min: 0, max: 1, r: null, g: null, b: null}
+8:
+    state: 1
+    displayText0: ""
+    displayText1: "(dynamic)"
+    displayTextMode: 1
+    displayTextAddress: "/Mx/button/4284/text"
+    fdrOutput: 0
+    fdrAddress: "/Mx/fader/4283"
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4281", min: 0, max: 1, r: 255, g: 5, b: 5}
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4284", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4285", min: 0, max: 1, r: null, g: null, b: null}
+9:
+    state: 1
+    displayText0: ""
+    displayText1: "(dynamic)"
+    displayTextMode: 1
+    displayTextAddress: "/Mx/button/4294/text"
+    fdrOutput: 0
+    fdrAddress: "/Mx/fader/4293"
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4291", min: 0, max: 1, r: 255, g: 5, b: 5}
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4294", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 1, type: 0, output: 0, address: "/Mx/button/4295", min: 0, max: 1, r: null, g: null, b: null}
+10:
+    state: 0
+    displayText0: ""
+    displayText1: ""
+    displayPercent: 0
+    displayTextMode: 0
+    displayTextAddress: 0
+    fdrOutput: 0
+    fdrAddress: 0
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: 10, g: 10, b: 10}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+11:
+    state: 0
+    displayText0: ""
+    displayText1: ""
+    displayTextMode: 0
+    displayTextAddress: 0
+    fdrOutput: 0
+    fdrAddress: 0
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: 10, g: 10, b: 10}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+12:
+    state: 1
+    displayText0: "Enttec ELM"
+    displayText1: "Master"
+    displayTextMode: 0
+    displayTextAddress: 0
+    fdrOutput: 0
+    fdrAddress: 0
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 1, type: 4, output: 0, address: 2, min: 0, max: 1, r: 0, g: 50, b: 254}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+13:
+    state: 1
+    displayText0: "Synesthesia"
+    displayText1: "Master"
+    displayTextMode: 0
+    displayTextAddress: 0
+    fdrOutput: 0
+    fdrAddress: 0
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 1, type: 4, output: 0, address: 1, min: 0, max: 1, r: 254, g: 135, b: 0}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+14:
+    state: 1
+    displayText0: "Resolume"
+    displayText1: "Master"
+    displayTextMode: 0
+    displayTextAddress: 0
+    fdrOutput: 1
+    fdrAddress: "/composition/master"
+    fdrMin: 0
+    fdrMax: 1
+    buttons:
+        - {state: 1, type: 4, output: 0, address: 0, min: 0, max: 1, r: 105, g: 202, b: 167}
+        - {state: 0, type: 0, output: 0, address: "/composition/bypassed", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+15:
+    state: 1
+    displayText0: "Onyx"
+    displayText1: "Master"
+    displayTextMode: 0
+    displayTextAddress: 0
+    fdrOutput: 0
+    fdrAddress: "/Mx/fader/2202"
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 1, type: 4, output: 0, address: 0, min: 0, max: 1, r: 255, g: 5, b: 5}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+16:
+    state: 0
+    displayText0: "1"
+    displayText1: ""
+    displayTextMode: 0
+    displayTextAddress: 0
+    fdrOutput: 0
+    fdrAddress: ""
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 0, type: 4, output: 0, address: 0, min: 0, max: 1, r: 255, g: 5, b: 5}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+17:
+    state: 0
+    displayText0: "2"
+    displayText1: ""
+    displayTextMode: 0
+    displayTextAddress: 0
+    fdrOutput: 0
+    fdrAddress: ""
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 0, type: 4, output: 0, address: 0, min: 0, max: 1, r: 5, g: 5, b: 5}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+18:
+    state: 1
+    displayText0: "To The"
+    displayText1: "Right"
+    displayTextMode: 0
+    displayTextAddress: 0
+    fdrOutput: 0
+    fdrAddress: ""
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 1, type: 4, output: 0, address: 3, min: 0, max: 1, r: 0, g: 255, b: 0}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+19:
+    state: 0
+    displayText0: "2"
+    displayText1: ""
+    displayTextMode: 0
+    displayTextAddress: 0
+    fdrOutput: 0
+    fdrAddress: ""
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 0, type: 4, output: 0, address: 0, min: 0, max: 1, r: 5, g: 5, b: 5}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+20:
+    state: 0
+    displayText0: ""
+    displayText1: ""
+    displayTextMode: 0
+    displayTextAddress: 0
+    fdrOutput: 0
+    fdrAddress: ""
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 0, type: 4, output: 0, address: 0, min: 0, max: 1, r: 5, g: 5, b: 5}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+21:
+    state: 1
+    displayText0: "Unreal"
+    displayText1: "Master"
+    displayTextMode: 0
+    displayTextAddress: 0
+    fdrOutput: 0
+    fdrAddress: ""
+    fdrMin: 0
+    fdrMax: 255
+    buttons:
+        - {state: 1, type: 4, output: 0, address: 4, min: 0, max: 1, r: 255, g: 5, b: 255}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
+        - {state: 0, type: 0, output: 0, address: "", min: 0, max: 1, r: null, g: null, b: null}
