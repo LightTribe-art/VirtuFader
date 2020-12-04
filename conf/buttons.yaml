@@ -13,88 +13,113 @@
 # You should have received a copy of the GNU General Public License
 # along with VirtuFader.  If not, see <https://www.gnu.org/licenses/>.
 
+##  file: buttons.yaml
+##  type: configuration file
+##  desc: This configuration file describes the function of the non-faderset buttons.
+##  note: Only place non-faderset button here. vFaders/sFaders contain the button config otherwise.
+##  params:
+##      btnId: str(hex): ID of the button
+##      desc: str: Informational description of the button.
+##      state: int: Default LED state of the button.
+##          0=Off
+##          1=On
+##          2=Blinking
+##      btnType: int: Button functionality type.
+##          0=Normal: Send High/Low values from MIDI
+##          1=HighOnly: Only send max values
+##          2=LowOnly: Only send min values
+##          3=HighThenLow: AKA Toggle: Send high value on trigger, then low value on subsequent trigger.
+##          4=Submenu: Submenu trigger.
+##          5=ResetFader: Not Applicable
+##      btnColorR: int: Red color value if supported by the button
+##      btnColorG: int: Blue color value if supported by the button
+##      btnColorB: int: Green color value if supported by the button
+##      output: int: Output ID for OSC
+##      address: str: OSC address.
+##      min: int: minumum value expected by OSC
+##      max: int: maximum value expected by OSC
 
 0:
-    btnId: "00"
-    desc: "Arm"
-    state: 1
-    btnType: 3
-    btnColorR: 255
-    btnColorG: 0
-    btnColorB: 255
-    output: 1
-    address: "/composition/bypassed"
-    min: 0
-    max: 1
+  btnId: "00"
+  desc: "Arm"
+  state: 1
+  btnType: 3
+  btnColorR: 255
+  btnColorG: 0
+  btnColorB: 255
+  output: 1
+  address: "/composition/bypassed"
+  min: 0
+  max: 1
 1:
-    btnId: "01"
-    desc: "Solo Clear"
-    state: 1
-    btnType: 3
-    btnColorR: 255
-    btnColorG: 0
-    btnColorB: 255
-    output: 1
-    address: "/Mx/button/5511"
-    min: 0
-    max: 1
+  btnId: "01"
+  desc: "Solo Clear"
+  state: 1
+  btnType: 3
+  btnColorR: 255
+  btnColorG: 0
+  btnColorB: 255
+  output: 1
+  address: "/Mx/button/5511"
+  min: 0
+  max: 1
 2:
-    btnId: "02"
-    desc: "Mute Clear"
-    state: 1
-    btnType: 3
-    btnColorR: 255
-    btnColorG: 0
-    btnColorB: 255
-    output: 1
-    address: "/Mx/button/5511"
-    min: 0
-    max: 1
+  btnId: "02"
+  desc: "Mute Clear"
+  state: 1
+  btnType: 3
+  btnColorR: 255
+  btnColorG: 0
+  btnColorB: 255
+  output: 1
+  address: "/Mx/button/5511"
+  min: 0
+  max: 1
 3:
-    btnId: "03"
-    desc: "Bypass"
-    state: 1
-    btnType: 3
-    btnColorR: 255
-    btnColorG: 0
-    btnColorB: 255
-    output: 1
-    address: "/Mx/button/5103"
-    min: 0
-    max: 1
+  btnId: "03"
+  desc: "Bypass"
+  state: 1
+  btnType: 3
+  btnColorR: 255
+  btnColorG: 0
+  btnColorB: 255
+  output: 1
+  address: "/Mx/button/5103"
+  min: 0
+  max: 1
 4:
-    btnId: "04"
-    desc: "Macro"
-    state: 1
-    btnType: 3
-    btnColorR: 255
-    btnColorG: 0
-    btnColorB: 255
-    output: 1
-    address: ""
-    min: 0
-    max: 1
+  btnId: "04"
+  desc: "Macro"
+  state: 1
+  btnType: 3
+  btnColorR: 255
+  btnColorG: 0
+  btnColorB: 255
+  output: 1
+  address: ""
+  min: 0
+  max: 1
 5:
-    btnId: "05"
-    desc: "Link"
-    state: 1
-    btnType: 3
-    btnColorR: 255
-    btnColorG: 0
-    btnColorB: 255
-    output: 1
-    address: ""
-    min: 0
-    max: 1
+  btnId: "05"
+  desc: "Link"
+  state: 1
+  btnType: 3
+  btnColorR: 255
+  btnColorG: 0
+  btnColorB: 255
+  output: 1
+  address: ""
+  min: 0
+  max: 1
 6:
-    btnId: "46"
-    desc: "Shift Left"
-    state: 1
-    btnType: 3
-    btnColorR: 255
-    btnColorG: 0
-    btnColorB: 255
-    output: 1
-    address: ""
-    min: 0
-    max: 1
+  btnId: "46"
+  desc: "Shift Left"
+  state: 1
+  btnType: 3
+  btnColorR: 255
+  btnColorG: 0
+  btnColorB: 255
+  output: 1
+  address: ""
+  min: 0
+  max: 1

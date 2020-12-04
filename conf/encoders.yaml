@@ -13,18 +13,35 @@
 # You should have received a copy of the GNU General Public License
 # along with VirtuFader.  If not, see <https://www.gnu.org/licenses/>.
 
+##  file: encoders.yaml
+##  type: configuration file
+##  desc: This configuration file describes the function of the encoders.
+##  params:
+##      0: int: Unique ID of the encoder.
+##          encId: str(hex): ID of the encoder
+##          output: int: OSC output to use for the control. See: outputs.yaml
+##          addressUp: str: OSC address for the UP direction of the encoder
+##          addressDown:str: OSC address for the DOWN direction of the encoder.
+##          overrideUpValue: int: UP value to send as override to the value send by
+##              the controller.
+##              null=Send controller value
+##              (int)=Send specificed value
+##          overrideDownValue: int: DOWN value to send as override to the value send by
+##              the controller.
+##              null=Send controller value
+##              (int)=Send specificed value
 
 0:
-    encId: "10"
-    output: 0
-    addressUp: "/Mx/scroll/4110/down"
-    addressDown: "/Mx/scroll/4110/up"
-    overrideUpValue: 1
-    overrideDownValue: 1
+  encId: "10"
+  output: 0
+  addressUp: "/Mx/scroll/4110/down"
+  addressDown: "/Mx/scroll/4110/up"
+  overrideUpValue: 1
+  overrideDownValue: 1
 1:
-    encId: "3C"
-    output: 0
-    addressUp: "/Mx/scroll/4110/down"
-    addressDown: "/Mx/scroll/4110/up"
-    overrideUpValue: 1
-    overrideDownValue: 1
+  encId: "3C"
+  output: 0
+  addressUp: "/Mx/scroll/4110/down"
+  addressDown: "/Mx/scroll/4110/up"
+  overrideUpValue: 1
+  overrideDownValue: 1

@@ -13,18 +13,27 @@
 # You should have received a copy of the GNU General Public License
 # along with VirtuFader.  If not, see <https://www.gnu.org/licenses/>.
 
+## file: options.yaml
+## type: configuration file
+## desc: This configuration file describes options that don't fit anywhere else.
+## todo: Cleanup. Move to devices.yaml.
+## params:
+##    logLevel: str: Pythong log level moniker. See: https://docs.python.org/3/library/logging.html#logging-levels
+##    oscServerIp: str(ip): Bind IP address for the VirtuFader OSC Server
+##    oscServerPort: int(port): Bid Port Number for the VirtuFader OSC Server
+##    debug:
+##    dbgMidiPort:
+##    dbgMidiInput:
+##    dbgOscInput:
+##    dbgOscOutput:
 
 logLevel: "DEBUG"
 oscServerIp: "2.0.0.2"
 oscServerPort: 9001
 
-
-
-# TODO: Refactor to use logger
 debug: true
 dbgMidiPort: false
 dbgMidiInput: false
 dbgMidiOutput: false
 dbgOscInput: false
 dbgOscOutput: false
-# /TODO: Refactor to use logger

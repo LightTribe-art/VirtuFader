@@ -13,18 +13,38 @@
 # You should have received a copy of the GNU General Public License
 # along with VirtuFader.  If not, see <https://www.gnu.org/licenses/>.
 
+## file: devices.yaml
+## type: configuration file
+## desc: This configuration file describes the physical device connected
+##      to VirtuFader. Only one device is currently supported:
+##      The PreSonus FaderPort 16
+## params:
+##      0: int: Unique ID of the device
+##          desc: str: Informational description of the device.
+##          sysexHeader: (for future use)
+##          fadersetCount: int: Number of fadersets on the device.
+##          fadersetBtnCount: int: Number of buttons in each faderset.
+##          midiInput: str: MIDI Input port name. Use dbgMidiPort in options.yaml to show port name at start.
+##          midiOutput: str: MIDI Output port name. Use dbgMidiPort in options.yaml to show port name at start.
+##          fdrMin: int: the minimum value sent by a fader.
+##          fdrMax: int: the maximum value sent by a fader.
+##          btnMin: int: the minimum (up) value sent by a button.
+##          btnMax: int: the minimum (down) value sent by a button.
+##          scrollBtnId: str(hex): the id of the button used to long-press-trigger vFader Bank Scroll.
+##          scrollCcId: str(hex): the id of the encoder used to scroll the vFader Bank left or right.
+##          displaySplit: int: number of characters used to split line 1/2 of the display
 
 0:
-    description: "FaderPort 16"
-    sysexHeader: null
-    fadersetCount: 16
-    fadersetBtnCount: 3
-    midiInput: "BMT 1 4"
-    midiOutput: "BMT 1 5"
-    fdrMin: -8192
-    fdrMax: 8191
-    btnMin: 0
-    btnMax: 127
-    scrollCcId: "10"
-    scrollBtnId: "20"
-    displaySplit: 10
+  desc: "FaderPort 16"
+  sysexHeader: null
+  fadersetCount: 16
+  fadersetBtnCount: 3
+  midiInput: "BMT 1 4"
+  midiOutput: "BMT 1 5"
+  fdrMin: -8192
+  fdrMax: 8191
+  btnMin: 0
+  btnMax: 127
+  scrollCcId: "10"
+  scrollBtnId: "20"
+  displaySplit: 10

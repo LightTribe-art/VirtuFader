@@ -13,29 +13,41 @@
 # You should have received a copy of the GNU General Public License
 # along with VirtuFader.  If not, see <https://www.gnu.org/licenses/>.
 
+##  file: smenus.yaml
+##  type: configuration file
+##  desc: This configuration file describes the structure of submenus.
+##  params:
+##      0: int: Unique ID of the submenu
+##          start: int: Submenu vFader (sFader) list starting point for the menu.
+##          count: int: Number of consectutive sFaders to display
+##          direction: int: How to display the submenu.
+##              0=To the left of the triggering vFader
+##              1=To the right of the triggering vFader
+##              2=Floating (not relative to a vFader)
+##          float: int: Faderset position to start the submenu when using direction=2.
 
 0:
-    start: 0
-    count: 5
-    direction: 0
-    float: null
+  start: 0
+  count: 5
+  direction: 0
+  float: null
 1:
-    start: 5
-    count: 5
-    direction: 0
-    float: null
+  start: 5
+  count: 5
+  direction: 0
+  float: null
 2:
-    start: 10
-    count: 5
-    direction: 0
-    float: null
+  start: 10
+  count: 5
+  direction: 0
+  float: null
 3:
-    start: 15
-    count: 2
-    direction: 1
-    float: null
+  start: 15
+  count: 2
+  direction: 1
+  float: null
 4:
-    start: 17
-    count: 3
-    direction: 0
-    float: null
+  start: 17
+  count: 3
+  direction: 0
+  float: null

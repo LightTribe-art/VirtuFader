@@ -13,52 +13,61 @@
 # You should have received a copy of the GNU General Public License
 # along with VirtuFader.  If not, see <https://www.gnu.org/licenses/>.
 
+##  file: fadersets.yaml
+##  type: configuration file
+##  desc: This configuration file describes each of the controls
+##      grouped into a faderset.
+##  params:
+##      0: int: Unique ID of the faderset.
+##          btnIds: ary[str(hex),str(hex)]: Allows for future support of
+##          different controllers and corresponds to the vFader/sFader
+##          configuration.
 
 0:
-    fdrId: 0
-    btnIds: ["18", "10", "08"]
+  fdrId: 0
+  btnIds: ["18", "10", "08"]
 1:
-    fdrId: 1
-    btnIds: ["19", "11", "09"]
+  fdrId: 1
+  btnIds: ["19", "11", "09"]
 2:
-    fdrId: 2
-    btnIds: ["1A", "12", "0A"]
+  fdrId: 2
+  btnIds: ["1A", "12", "0A"]
 3:
-    fdrId: 3
-    btnIds: ["1B", "13", "0B"]
+  fdrId: 3
+  btnIds: ["1B", "13", "0B"]
 4:
-    fdrId: 4
-    btnIds: ["1C", "14", "0C"]
+  fdrId: 4
+  btnIds: ["1C", "14", "0C"]
 5:
-    fdrId: 5
-    btnIds: ["1D", "15", "0D"]
+  fdrId: 5
+  btnIds: ["1D", "15", "0D"]
 6:
-    fdrId: 6
-    btnIds: ["1E", "16", "0E"]
+  fdrId: 6
+  btnIds: ["1E", "16", "0E"]
 7:
-    fdrId: 7
-    btnIds: ["1F", "17", "0F"]
+  fdrId: 7
+  btnIds: ["1F", "17", "0F"]
 8:
-    fdrId: 8
-    btnIds: ["07", "78", "50"]
+  fdrId: 8
+  btnIds: ["07", "78", "50"]
 9:
-    fdrId: 9
-    btnIds: ["21", "79", "51"]
+  fdrId: 9
+  btnIds: ["21", "79", "51"]
 10:
-    fdrId: 10
-    btnIds: ["22", "7A", "52"]
+  fdrId: 10
+  btnIds: ["22", "7A", "52"]
 11:
-    fdrId: 11
-    btnIds: ["23", "7B", "58"]
+  fdrId: 11
+  btnIds: ["23", "7B", "58"]
 12:
-    fdrId: 12
-    btnIds: ["24", "7C", "54"]
+  fdrId: 12
+  btnIds: ["24", "7C", "54"]
 13:
-    fdrId: 13
-    btnIds: ["25", "7D", "55"]
+  fdrId: 13
+  btnIds: ["25", "7D", "55"]
 14:
-    fdrId: 14
-    btnIds: ["26", "7E", "59"]
+  fdrId: 14
+  btnIds: ["26", "7E", "59"]
 15:
-    fdrId: 15
-    btnIds: ["27", "7F", "57"]
+  fdrId: 15
+  btnIds: ["27", "7F", "57"]

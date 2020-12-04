@@ -13,303 +13,944 @@
 # You should have received a copy of the GNU General Public License
 # along with VirtuFader.  If not, see <https://www.gnu.org/licenses/>.
 
+## file: sfaders.yaml
+## type: configuration file
+## desc: This configuration file describes Submenu vFaders (sFaders)
+## params:
+##      0: int: Unique ID of the sFader
+##          state: int: State of the sFader
+##              0=Disabled
+##              1=Enabled
+##          displayText0: str: Display text for Line 1
+##          displayText1: str: Display text for Line 2
+##          displayPercent: int: Startup Percentage: # TODO: Remove from configurations.
+##          displayTextMode: int: Display text mode.
+##              0=Static
+##              1=Dynamic See: displayTextAddress
+##          displayTextAddress: str: Address for Display Text feedback from OSC
+##          fdrOutput: int: OSC Output for the physical fader control
+##          fdrAddress: str: OSC Output Address for the  physical fader control
+##          fdrMin: int: OSC Output Min value
+##          fdrMax: int: OSC Output Max Value
+##          buttons: ary: Button configuration array.
+##              - {state: ..., type: ..., output: ..., address: ..., min: ..., max: ..., r: ..., g: ..., b: ...}
+##              ...
+##                  state: int: State of the button LED
+##                      0=Disabled
+##                      1=Enabled
+##                      2=Blinking
+##                  type: int:
+##                      0=Normal: Send High/Low values from MIDI
+##                      1=HighOnly: Only send max values
+##                      2=LowOnly: Only send min values
+##                      3=HighThenLow: AKA Toggle: Send high value on trigger, then low value on subsequent trigger.
+##                      4=Submenu: Not Applicable: Can't trigger submenu from submenu...
+##                      5=ResetFader: Resets fader to default value.
+##                  output: int: OSC Output for the button
+##                  address: str: OSC Output Address for the button
+##                  min: int: Minimum value for the OSC button Output
+##                  max: int: Maximum value for the OSC button output
+##                  r: int: Red value for the button color (if supported)
+##                  g: int: Green value for the button color (if supported)
+##                  b: int: Blue value for the button color (if supported)
+
 0:
-    state: 1
-    displayText0: "Br/Cr"
-    displayText1: "Opacity"
-    displayPercent: 0
-    displayTextMode: 0
-    displayTextAddress: 0
-    fdrOutput: 1
-    fdrAddress: "/composition/video/effects/brightnesscontrast/opacity"
-    fdrMin: 0
-    fdrMax: 1
-    buttons:
-        - {state: 2, type: 2, output: 1, address: 0, min: 0, max: 1, r: 105, g: 202, b: 167}
-        - {state: 0, type: 0, output: 1, address: "/composition/video/effects/brightnesscontrast/bypassed", min: 0, max: 1, r: null, g: null, b: null}
-        - {state: 0, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
+  state: 1
+  displayText0: "Br/Cr"
+  displayText1: "Opacity"
+  displayPercent: 0
+  displayTextMode: 0
+  displayTextAddress: 0
+  fdrOutput: 1
+  fdrAddress: "/composition/video/effects/brightnesscontrast/opacity"
+  fdrMin: 0
+  fdrMax: 1
+  buttons:
+    - {
+        state: 2,
+        type: 2,
+        output: 1,
+        address: 0,
+        min: 0,
+        max: 1,
+        r: 105,
+        g: 202,
+        b: 167,
+      }
+    - {
+        state: 0,
+        type: 0,
+        output: 1,
+        address: "/composition/video/effects/brightnesscontrast/bypassed",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
+    - {
+        state: 0,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
 1:
-    state: 1
-    displayText0: "Br/Cr"
-    displayText1: "Brightness"
-    displayPercent: 0
-    displayTextMode: 0
-    displayTextAddress: 0
-    fdrOutput: 1
-    fdrAddress: "/composition/video/effects/brightnesscontrast/effect/brightness"
-    fdrMin: 0
-    fdrMax: 1
-    buttons:
-        - {state: 2, type: 2, output: 1, address: 0, min: 0, max: 1, r: 105, g: 202, b: 167}
-        - {state: 0, type: 0, output: 1, address: "/composition/video/effects/brightnesscontrast/bypassed", min: 0, max: 1, r: null, g: null, b: null}
-        - {state: 0, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
+  state: 1
+  displayText0: "Br/Cr"
+  displayText1: "Brightness"
+  displayPercent: 0
+  displayTextMode: 0
+  displayTextAddress: 0
+  fdrOutput: 1
+  fdrAddress: "/composition/video/effects/brightnesscontrast/effect/brightness"
+  fdrMin: 0
+  fdrMax: 1
+  buttons:
+    - {
+        state: 2,
+        type: 2,
+        output: 1,
+        address: 0,
+        min: 0,
+        max: 1,
+        r: 105,
+        g: 202,
+        b: 167,
+      }
+    - {
+        state: 0,
+        type: 0,
+        output: 1,
+        address: "/composition/video/effects/brightnesscontrast/bypassed",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
+    - {
+        state: 0,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
 2:
-    state: 1
-    displayText0: "Br/Cr"
-    displayText1: "Contrast"
-    displayPercent: 0
-    displayTextMode: 0
-    displayTextAddress: 0
-    fdrOutput: 1
-    fdrAddress: "/composition/video/effects/brightnesscontrast/effect/contrast"
-    fdrMin: 0
-    fdrMax: 1
-    buttons:
-        - {state: 2, type: 2, output: 1, address: 0, min: 0, max: 1, r: 105, g: 202, b: 167}
-        - {state: 0, type: 0, output: 1, address: "/composition/video/effects/brightnesscontrast/bypassed", min: 0, max: 1, r: null, g: null, b: null}
-        - {state: 0, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
+  state: 1
+  displayText0: "Br/Cr"
+  displayText1: "Contrast"
+  displayPercent: 0
+  displayTextMode: 0
+  displayTextAddress: 0
+  fdrOutput: 1
+  fdrAddress: "/composition/video/effects/brightnesscontrast/effect/contrast"
+  fdrMin: 0
+  fdrMax: 1
+  buttons:
+    - {
+        state: 2,
+        type: 2,
+        output: 1,
+        address: 0,
+        min: 0,
+        max: 1,
+        r: 105,
+        g: 202,
+        b: 167,
+      }
+    - {
+        state: 0,
+        type: 0,
+        output: 1,
+        address: "/composition/video/effects/brightnesscontrast/bypassed",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
+    - {
+        state: 0,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
 3:
-    state: 1
-    displayText0: "Saturation"
-    displayText1: "Opacity"
-    displayPercent: 0
-    displayTextMode: 0
-    displayTextAddress: 0
-    fdrOutput: 1
-    fdrAddress: "/composition/video/effects/saturation/opacity"
-    fdrMin: 0
-    fdrMax: 1
-    buttons:
-        - {state: 2, type: 2, output: 1, address: 0, min: 0, max: 1, r: 105, g: 202, b: 167}
-        - {state: 0, type: 0, output: 1, address: "/composition/video/effects/brightnesscontrast/bypassed", min: 0, max: 1, r: null, g: null, b: null}
-        - {state: 0, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
+  state: 1
+  displayText0: "Saturation"
+  displayText1: "Opacity"
+  displayPercent: 0
+  displayTextMode: 0
+  displayTextAddress: 0
+  fdrOutput: 1
+  fdrAddress: "/composition/video/effects/saturation/opacity"
+  fdrMin: 0
+  fdrMax: 1
+  buttons:
+    - {
+        state: 2,
+        type: 2,
+        output: 1,
+        address: 0,
+        min: 0,
+        max: 1,
+        r: 105,
+        g: 202,
+        b: 167,
+      }
+    - {
+        state: 0,
+        type: 0,
+        output: 1,
+        address: "/composition/video/effects/brightnesscontrast/bypassed",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
+    - {
+        state: 0,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
 4:
-    state: 1
-    displayText0: "Saturation"
-    displayText1: "Saturation"
-    displayPercent: 0
-    displayTextMode: 0
-    displayTextAddress: 0
-    fdrOutput: 1
-    fdrAddress: "/composition/video/effects/saturation/effect/saturation"
-    fdrMin: 0
-    fdrMax: 1
-    buttons:
-        - {state: 2, type: 2, output: 1, address: 0, min: 0, max: 1, r: 105, g: 202, b: 167}
-        - {state: 0, type: 0, output: 1, address: "/composition/video/effects/brightnesscontrast/bypassed", min: 0, max: 1, r: null, g: null, b: null}
-        - {state: 0, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
+  state: 1
+  displayText0: "Saturation"
+  displayText1: "Saturation"
+  displayPercent: 0
+  displayTextMode: 0
+  displayTextAddress: 0
+  fdrOutput: 1
+  fdrAddress: "/composition/video/effects/saturation/effect/saturation"
+  fdrMin: 0
+  fdrMax: 1
+  buttons:
+    - {
+        state: 2,
+        type: 2,
+        output: 1,
+        address: 0,
+        min: 0,
+        max: 1,
+        r: 105,
+        g: 202,
+        b: 167,
+      }
+    - {
+        state: 0,
+        type: 0,
+        output: 1,
+        address: "/composition/video/effects/brightnesscontrast/bypassed",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
+    - {
+        state: 0,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
 5:
-    state: 1
-    displayText0: "Brightness"
-    displayText1: ""
-    displayPercent: 0
-    displayTextMode: 0
-    displayTextAddress: 0
-    fdrOutput: 1
-    fdrAddress: ""
-    fdrMin: 0
-    fdrMax: 1
-    buttons:
-        - {state: 2, type: 2, output: 1, address: 0, min: 0, max: 1, r: 254, g: 135, b: 0}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
+  state: 1
+  displayText0: "Brightness"
+  displayText1: ""
+  displayPercent: 0
+  displayTextMode: 0
+  displayTextAddress: 0
+  fdrOutput: 1
+  fdrAddress: ""
+  fdrMin: 0
+  fdrMax: 1
+  buttons:
+    - {
+        state: 2,
+        type: 2,
+        output: 1,
+        address: 0,
+        min: 0,
+        max: 1,
+        r: 254,
+        g: 135,
+        b: 0,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
 6:
-    state: 1
-    displayText0: "Gamma"
-    displayText1: ""
-    displayPercent: 0
-    displayTextMode: 0
-    displayTextAddress: 0
-    fdrOutput: 1
-    fdrAddress: ""
-    fdrMin: 0
-    fdrMax: 1
-    buttons:
-        - {state: 2, type: 2, output: 1, address: 0, min: 0, max: 1, r: 254, g: 135, b: 0}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
+  state: 1
+  displayText0: "Gamma"
+  displayText1: ""
+  displayPercent: 0
+  displayTextMode: 0
+  displayTextAddress: 0
+  fdrOutput: 1
+  fdrAddress: ""
+  fdrMin: 0
+  fdrMax: 1
+  buttons:
+    - {
+        state: 2,
+        type: 2,
+        output: 1,
+        address: 0,
+        min: 0,
+        max: 1,
+        r: 254,
+        g: 135,
+        b: 0,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
 7:
-    state: 1
-    displayText0: "Contrast"
-    displayText1: ""
-    displayPercent: 0
-    displayTextMode: 0
-    displayTextAddress: 0
-    fdrOutput: 1
-    fdrAddress: "n"
-    fdrMin: 0
-    fdrMax: 1
-    buttons:
-        - {state: 2, type: 2, output: 1, address: 0, min: 0, max: 1, r: 254, g: 135, b: 0}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
+  state: 1
+  displayText0: "Contrast"
+  displayText1: ""
+  displayPercent: 0
+  displayTextMode: 0
+  displayTextAddress: 0
+  fdrOutput: 1
+  fdrAddress: "n"
+  fdrMin: 0
+  fdrMax: 1
+  buttons:
+    - {
+        state: 2,
+        type: 2,
+        output: 1,
+        address: 0,
+        min: 0,
+        max: 1,
+        r: 254,
+        g: 135,
+        b: 0,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
 8:
-    state: 1
-    displayText0: "Hue"
-    displayText1: ""
-    displayPercent: 0
-    displayTextMode: 0
-    displayTextAddress: 0
-    fdrOutput: 1
-    fdrAddress: ""
-    fdrMin: 0
-    fdrMax: 1
-    buttons:
-        - {state: 2, type: 2, output: 1, address: 0, min: 0, max: 1, r: 254, g: 135, b: 0}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
+  state: 1
+  displayText0: "Hue"
+  displayText1: ""
+  displayPercent: 0
+  displayTextMode: 0
+  displayTextAddress: 0
+  fdrOutput: 1
+  fdrAddress: ""
+  fdrMin: 0
+  fdrMax: 1
+  buttons:
+    - {
+        state: 2,
+        type: 2,
+        output: 1,
+        address: 0,
+        min: 0,
+        max: 1,
+        r: 254,
+        g: 135,
+        b: 0,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
 9:
-    state: 1
-    displayText0: "Saturation"
-    displayText1: ""
-    displayPercent: 0
-    displayTextMode: 0
-    displayTextAddress: 0
-    fdrOutput: 1
-    fdrAddress: ""
-    fdrMin: 0
-    fdrMax: 1
-    buttons:
-        - {state: 2, type: 2, output: 1, address: 0, min: 0, max: 1, r: 254, g: 135, b: 0}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
+  state: 1
+  displayText0: "Saturation"
+  displayText1: ""
+  displayPercent: 0
+  displayTextMode: 0
+  displayTextAddress: 0
+  fdrOutput: 1
+  fdrAddress: ""
+  fdrMin: 0
+  fdrMax: 1
+  buttons:
+    - {
+        state: 2,
+        type: 2,
+        output: 1,
+        address: 0,
+        min: 0,
+        max: 1,
+        r: 254,
+        g: 135,
+        b: 0,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
 10:
-    state: 1
-    displayText0: "Stage 1"
-    displayText1: "Int"
-    displayPercent: 0
-    displayTextMode: 1
-    displayTextAddress: ""
-    fdrOutput: 1
-    fdrAddress: ""
-    fdrMin: 0
-    fdrMax: 1
-    buttons:
-        - {state: 2, type: 2, output: 1, address: 0, min: 0, max: 1, r: 0, g: 50, b: 254}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
+  state: 1
+  displayText0: "Stage 1"
+  displayText1: "Int"
+  displayPercent: 0
+  displayTextMode: 1
+  displayTextAddress: ""
+  fdrOutput: 1
+  fdrAddress: ""
+  fdrMin: 0
+  fdrMax: 1
+  buttons:
+    - {
+        state: 2,
+        type: 2,
+        output: 1,
+        address: 0,
+        min: 0,
+        max: 1,
+        r: 0,
+        g: 50,
+        b: 254,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
 11:
-    state: 1
-    displayText0: "Stage 2"
-    displayText1: ""
-    displayPercent: 0
-    displayTextMode: 0
-    displayTextAddress: 0
-    fdrOutput: 1
-    fdrAddress: ""
-    fdrMin: 0
-    fdrMax: 1
-    buttons:
-        - {state: 2, type: 2, output: 1, address: 0, min: 0, max: 1, r: 0, g: 50, b: 254}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
+  state: 1
+  displayText0: "Stage 2"
+  displayText1: ""
+  displayPercent: 0
+  displayTextMode: 0
+  displayTextAddress: 0
+  fdrOutput: 1
+  fdrAddress: ""
+  fdrMin: 0
+  fdrMax: 1
+  buttons:
+    - {
+        state: 2,
+        type: 2,
+        output: 1,
+        address: 0,
+        min: 0,
+        max: 1,
+        r: 0,
+        g: 50,
+        b: 254,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
 12:
-    state: 1
-    displayText0: "Stage 3"
-    displayText1: ""
-    displayPercent: 0
-    displayTextMode: 0
-    displayTextAddress: 0
-    fdrOutput: 1
-    fdrAddress: ""
-    fdrMin: 0
-    fdrMax: 1
-    buttons:
-        - {state: 2, type: 2, output: 1, address: 0, min: 0, max: 1, r: 0, g: 50, b: 254}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
+  state: 1
+  displayText0: "Stage 3"
+  displayText1: ""
+  displayPercent: 0
+  displayTextMode: 0
+  displayTextAddress: 0
+  fdrOutput: 1
+  fdrAddress: ""
+  fdrMin: 0
+  fdrMax: 1
+  buttons:
+    - {
+        state: 2,
+        type: 2,
+        output: 1,
+        address: 0,
+        min: 0,
+        max: 1,
+        r: 0,
+        g: 50,
+        b: 254,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
 13:
-    state: 1
-    displayText0: "Stage 4"
-    displayText1: ""
-    displayPercent: 0
-    displayTextMode: 0
-    displayTextAddress: 0
-    fdrOutput: 1
-    fdrAddress: ""
-    fdrMin: 0
-    fdrMax: 1
-    buttons:
-        - {state: 2, type: 2, output: 1, address: 0, min: 0, max: 1, r: 0, g: 50, b: 254}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
+  state: 1
+  displayText0: "Stage 4"
+  displayText1: ""
+  displayPercent: 0
+  displayTextMode: 0
+  displayTextAddress: 0
+  fdrOutput: 1
+  fdrAddress: ""
+  fdrMin: 0
+  fdrMax: 1
+  buttons:
+    - {
+        state: 2,
+        type: 2,
+        output: 1,
+        address: 0,
+        min: 0,
+        max: 1,
+        r: 0,
+        g: 50,
+        b: 254,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
 14:
-    state: 1
-    displayText0: "Stage 5"
-    displayText1: ""
-    displayPercent: 0
-    displayTextMode: 0
-    displayTextAddress: 0
-    fdrOutput: 1
-    fdrAddress: ""
-    fdrMin: 0
-    fdrMax: 1
-    buttons:
-        - {state: 2, type: 2, output: 1, address: 0, min: 0, max: 1, r: 0, g: 50, b: 254}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
+  state: 1
+  displayText0: "Stage 5"
+  displayText1: ""
+  displayPercent: 0
+  displayTextMode: 0
+  displayTextAddress: 0
+  fdrOutput: 1
+  fdrAddress: ""
+  fdrMin: 0
+  fdrMax: 1
+  buttons:
+    - {
+        state: 2,
+        type: 2,
+        output: 1,
+        address: 0,
+        min: 0,
+        max: 1,
+        r: 0,
+        g: 50,
+        b: 254,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
 15:
-    state: 1
-    displayText0: "Brightness"
-    displayText1: ""
-    displayPercent: 0
-    displayTextMode: 0
-    displayTextAddress: 0
-    fdrOutput: 1
-    fdrAddress: ""
-    fdrMin: 0
-    fdrMax: 1
-    buttons:
-        - {state: 2, type: 2, output: 1, address: 0, min: 0, max: 1, r: 0, g: 255, b: 0}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
+  state: 1
+  displayText0: "Brightness"
+  displayText1: ""
+  displayPercent: 0
+  displayTextMode: 0
+  displayTextAddress: 0
+  fdrOutput: 1
+  fdrAddress: ""
+  fdrMin: 0
+  fdrMax: 1
+  buttons:
+    - {
+        state: 2,
+        type: 2,
+        output: 1,
+        address: 0,
+        min: 0,
+        max: 1,
+        r: 0,
+        g: 255,
+        b: 0,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
 16:
-    state: 1
-    displayText0: "Contrast"
-    displayText1: ""
-    displayPercent: 0
-    displayTextMode: 0
-    displayTextAddress: 0
-    fdrOutput: 1
-    fdrAddress: ""
-    fdrMin: 0
-    fdrMax: 1
-    buttons:
-        - {state: 2, type: 2, output: 1, address: 0, min: 0, max: 1, r: 0, g: 255, b: 0}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
+  state: 1
+  displayText0: "Contrast"
+  displayText1: ""
+  displayPercent: 0
+  displayTextMode: 0
+  displayTextAddress: 0
+  fdrOutput: 1
+  fdrAddress: ""
+  fdrMin: 0
+  fdrMax: 1
+  buttons:
+    - {
+        state: 2,
+        type: 2,
+        output: 1,
+        address: 0,
+        min: 0,
+        max: 1,
+        r: 0,
+        g: 255,
+        b: 0,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
 17:
-    state: 1
-    displayText0: "Contrast"
-    displayText1: ""
-    displayPercent: 0
-    displayTextMode: 0
-    displayTextAddress: 0
-    fdrOutput: 1
-    fdrAddress: ""
-    fdrMin: 0
-    fdrMax: 1
-    buttons:
-        - {state: 2, type: 2, output: 1, address: 0, min: 0, max: 1, r: 255, g: 0, b: 255}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
+  state: 1
+  displayText0: "Contrast"
+  displayText1: ""
+  displayPercent: 0
+  displayTextMode: 0
+  displayTextAddress: 0
+  fdrOutput: 1
+  fdrAddress: ""
+  fdrMin: 0
+  fdrMax: 1
+  buttons:
+    - {
+        state: 2,
+        type: 2,
+        output: 1,
+        address: 0,
+        min: 0,
+        max: 1,
+        r: 255,
+        g: 0,
+        b: 255,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
 18:
-    state: 1
-    displayText0: "Contrast"
-    displayText1: ""
-    displayPercent: 0
-    displayTextMode: 0
-    displayTextAddress: 0
-    fdrOutput: 1
-    fdrAddress: ""
-    fdrMin: 0
-    fdrMax: 1
-    buttons:
-        - {state: 2, type: 2, output: 1, address: 0, min: 0, max: 1, r: 255, g: 0, b: 255}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
+  state: 1
+  displayText0: "Contrast"
+  displayText1: ""
+  displayPercent: 0
+  displayTextMode: 0
+  displayTextAddress: 0
+  fdrOutput: 1
+  fdrAddress: ""
+  fdrMin: 0
+  fdrMax: 1
+  buttons:
+    - {
+        state: 2,
+        type: 2,
+        output: 1,
+        address: 0,
+        min: 0,
+        max: 1,
+        r: 255,
+        g: 0,
+        b: 255,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
 19:
-    state: 1
-    displayText0: "Saturation"
-    displayText1: ""
-    displayPercent: 0
-    displayTextMode: 0
-    displayTextAddress: 0
-    fdrOutput: 1
-    fdrAddress: ""
-    fdrMin: 0
-    fdrMax: 1
-    buttons:
-        - {state: 2, type: 2, output: 1, address: 0, min: 0, max: 1, r: 255, g: 0, b: 255}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
-        - {state: 1, type: 0, output: 1, address: "", min: 0, max: 1, r: null, g: null, b: null}
+  state: 1
+  displayText0: "Saturation"
+  displayText1: ""
+  displayPercent: 0
+  displayTextMode: 0
+  displayTextAddress: 0
+  fdrOutput: 1
+  fdrAddress: ""
+  fdrMin: 0
+  fdrMax: 1
+  buttons:
+    - {
+        state: 2,
+        type: 2,
+        output: 1,
+        address: 0,
+        min: 0,
+        max: 1,
+        r: 255,
+        g: 0,
+        b: 255,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
+    - {
+        state: 1,
+        type: 0,
+        output: 1,
+        address: "",
+        min: 0,
+        max: 1,
+        r: null,
+        g: null,
+        b: null,
+      }
